@@ -1,0 +1,23 @@
+.lz-date-selector {
+  display: flex;
+  align-items: center;
+  .prefix-box {
+    min-width: 36px;
+    margin-right: 10px;
+  }
+  .select {
+    margin-right: 10px;
+    min-width: 120px;
+  }
+  .date-picker {
+    margin-right: 20px;
+    min-width: 160px;
+  }
+}
+.lz-date-selector.left {
+  flex-direction: row;
+}
+.lz-date-selector.top {
+  flex-direction: column;
+  align-items: flex-start;
+}

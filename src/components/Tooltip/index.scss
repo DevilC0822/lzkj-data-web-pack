@@ -1,0 +1,20 @@
+.Tooltip-box {
+  background-color: rgb(235, 243, 253);
+  border: 1px solid rgb(186, 222, 255);
+  border-radius: 4px;
+  padding: 11px 16px;
+  margin-top: 20px;
+  box-shadow: rgba(169, 182, 199, 0.2) 0px 0px 15px 2px;
+  display: flex;
+  align-items: center;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    color: #2981e9;
+  }
+  .content-box {
+    margin-top: 1px;
+  }
+}

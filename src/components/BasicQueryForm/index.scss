@@ -1,0 +1,15 @@
+.basic-query-form {
+  .next-form-item {
+    width: 100%;
+    .next-input, .next-select, .next-date-picker2 {
+      width: 100%;
+    }
+  }
+  .next-col-6 {
+    min-width: 400px;
+  }
+  .operate-box {
+    display: flex;
+    align-items: center;
+  }
+}
