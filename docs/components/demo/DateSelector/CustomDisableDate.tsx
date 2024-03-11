@@ -3,10 +3,10 @@
  * description: 通过customDisabledDate可以自定义禁止日期函数
  */
 
-import React, { useState } from 'react';
-import { DateSelectorSearch } from 'lzkj-data-web-pack';
 import { Dayjs } from 'dayjs';
-import type { IDateSelectorSearchDataSource as IDataSource } from 'lzkj-data-web-pack';
+import type { IDateSelectorDataSource as IDataSource } from 'lzkj-data-web-pack';
+import { DateSelector } from 'lzkj-data-web-pack';
+import React, { useState } from 'react';
 
 const dataSource: IDataSource[] = [
   {
@@ -15,7 +15,7 @@ const dataSource: IDataSource[] = [
     customDisabledDate: (v: Dayjs, mode: string) => {
       console.log(v, mode);
       return false;
-    }
+    },
   },
   {
     name: '自然周',
@@ -23,7 +23,7 @@ const dataSource: IDataSource[] = [
     customDisabledDate: (v: Dayjs, mode: string) => {
       console.log(v, mode);
       return false;
-    }
+    },
   },
   {
     name: '自然月',
@@ -31,7 +31,7 @@ const dataSource: IDataSource[] = [
     customDisabledDate: (v: Dayjs, mode: string) => {
       console.log(v, mode);
       return false;
-    }
+    },
   },
 ];
 
@@ -44,5 +44,12 @@ export default () => {
   const onSearch = () => {
     console.log(value);
   };
-  return <DateSelectorSearch value={value} changeValue={setValue} dataSource={dataSource} onSearch={onSearch} />;
+  return (
+    <DateSelector
+      value={value}
+      changeValue={setValue}
+      dataSource={dataSource}
+      onSearch={onSearch}
+    />
+  );
 };

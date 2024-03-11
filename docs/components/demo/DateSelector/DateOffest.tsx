@@ -3,9 +3,9 @@
  * description: 通过dateOffset可以设置时间偏移量，可以设置正负值，正值表示向后偏移，负值表示向前偏移
  */
 
+import type { IDateSelectorDataSource as IDataSource } from 'lzkj-data-web-pack';
+import { DateSelector } from 'lzkj-data-web-pack';
 import React, { useState } from 'react';
-import { DateSelectorSearch } from 'lzkj-data-web-pack';
-import type { IDateSelectorSearchDataSource as IDataSource } from 'lzkj-data-web-pack';
 
 const dataSource: IDataSource[] = [
   {
@@ -33,5 +33,13 @@ export default () => {
   const onSearch = () => {
     console.log(value);
   };
-  return <DateSelectorSearch dateOffset={dateOffset} value={value} changeValue={setValue} dataSource={dataSource} onSearch={onSearch} />;
+  return (
+    <DateSelector
+      dateOffset={dateOffset}
+      value={value}
+      changeValue={setValue}
+      dataSource={dataSource}
+      onSearch={onSearch}
+    />
+  );
 };

@@ -2,9 +2,9 @@
  * title: 默认
  */
 
+import type { IDateSelectorDataSource as IDataSource } from 'lzkj-data-web-pack';
+import { DateSelector } from 'lzkj-data-web-pack';
 import React, { useState } from 'react';
-import { DateSelectorSearch } from 'lzkj-data-web-pack';
-import type { IDateSelectorSearchDataSource as IDataSource } from 'lzkj-data-web-pack';
 
 const dataSource: IDataSource[] = [
   {
@@ -102,5 +102,12 @@ export default () => {
   const onSearch = () => {
     console.log(value);
   };
-  return <DateSelectorSearch value={value} changeValue={setValue} dataSource={dataSource} onSearch={onSearch} />;
+  return (
+    <DateSelector
+      value={value}
+      changeValue={setValue}
+      dataSource={dataSource}
+      onSearch={onSearch}
+    />
+  );
 };

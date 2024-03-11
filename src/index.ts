@@ -1,8 +1,13 @@
 import FlowChart from './components/FlowChart';
-import type { IDataSource as IFlowChartDataSource, ILineOptions, IExtra, IPoint } from './components/FlowChart/types';
+import type {
+  IExtra,
+  IDataSource as IFlowChartDataSource,
+  ILineOptions,
+  IPoint,
+} from './components/FlowChart/types';
 
-import DateSelectorSearch from './components/DateSelectorSearch';
-import type { IDataSource as IDateSelectorSearchDataSource } from './components/DateSelectorSearch/types';
+import DateSelector from './components/DateSelector';
+import type { IDataSource as IDateSelectorDataSource } from './components/DateSelector/types';
 
 import SearchResetGroup from './components/SearchResetGroup';
 
@@ -17,28 +22,28 @@ import type { IQueryConditionsList } from './components/BasicQueryForm/types';
 
 import ResponsiveContent from './components/ResponsiveContent';
 
-import { formatNum, dealToolTipText } from './functions/index';
 import { debounce, throttle } from 'lodash';
+import { dealToolTipText, formatNum } from './functions/index';
 
 export {
+  BasicQueryForm,
+  DateSelector,
   // 组件
   FlowChart,
+  IDateSelectorDataSource,
+  IExtra,
   IFlowChartDataSource,
   ILineOptions,
-  IExtra,
   IPoint,
-  DateSelectorSearch,
-  IDateSelectorSearchDataSource,
+  IQueryConditionsList,
+  Pagination,
+  ResponsiveContent,
   SearchResetGroup,
   SubTitle,
   Tooltip,
-  Pagination,
-  BasicQueryForm,
-  IQueryConditionsList,
-  ResponsiveContent,
-  // 函数
-  formatNum,
   dealToolTipText,
   debounce,
+  // 函数
+  formatNum,
   throttle,
 };

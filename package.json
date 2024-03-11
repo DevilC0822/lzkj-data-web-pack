@@ -1,29 +1,26 @@
 {
   "name": "lzkj-data-web-pack",
-  "version": "0.0.1-alpha.6",
+  "version": "0.0.1-alpha.7",
   "description": "陆泽科技数据业务部门前端开发工具库",
+  "license": "MIT",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "start": "npm run dev",
-    "dev": "dumi dev",
     "build": "father build",
     "build:watch": "father dev",
+    "dev": "dumi dev",
     "docs:build": "dumi build",
-    "prepare": "husky install && dumi setup",
     "doctor": "father doctor",
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-    "prepublishOnly": "father doctor && npm run build"
+    "prepare": "husky install && dumi setup",
+    "prepublishOnly": "father doctor && npm run build",
+    "start": "npm run dev"
   },
-  "authors": [
-    "chenjiahao@lucidata.cn"
-  ],
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -46,12 +43,10 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+  "dependencies": {
+    "@alifd/next": "^1.26.37",
+    "dayjs": "^1.11.10",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -73,9 +68,14 @@
     "react-dom": "^17.0.0",
     "stylelint": "^14.9.1"
   },
-  "dependencies": {
-    "@alifd/next": "^1.26.37",
-    "dayjs": "^1.11.10",
-    "lodash": "^4.17.21"
-  }
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "chenjiahao@lucidata.cn"
+  ]
 }
