@@ -12,6 +12,10 @@ title: 版本变更记录
 
 这是一个预览版，仅供参考，不建议在生产环境中使用。
 
+## v0.0.1-alpha.8
+
+- [`DateSelector`](../components/DateSelector.md)组件新增**selectProps** 和 **datePickerProps**属性，用于配置选择器和日期选择器的属性
+
 ## v0.0.1-alpha.5
 
 - 新增[`Pagination`](../components/Pagination.md)、[`ResponsiveContent`](../components/ResponsiveContent.md)和[`BasicQueryForm`](../components/BasicQueryForm.md)组件
@@ -31,7 +35,7 @@ title: 版本变更记录
 
 - 引入**lodash**库，并导出[`debounce`](../functions/debounce.md)和[`throttle`](../functions/throttle.md)函数
 - 修复[`FlowChart`](../components/FlowChart.md)组件的**isScalingX**属性没有进行初始化的问题
-- [`FlowChart`](../components/FlowChart.md)组件新增**isScrollX**属性，用于开启x轴滚动条
+- [`FlowChart`](../components/FlowChart.md)组件新增**isScrollX**属性，用于开启 x 轴滚动条
 
 ## v0.0.1-alpha.1
 

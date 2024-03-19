@@ -33,11 +33,13 @@ interface IProps {
     customClass?: string; // default: ''
     customStyle?: object; // default: {}
   };
+  selectProps?: object; // default: {}
   datePicker?: {
     customClass?: string; // default: ''
     customStyle?: object; // default: {}
     hasClear?: boolean; // default: false
   };
+  datePickerProps?: object; // default: {}
   searchResetGroup?: {
     show?: boolean; // default: true
     searchName?: string; // default: '查询'
@@ -164,10 +166,12 @@ const DateSelector: FC<IProps> = (props) => {
     select = {
       customClass: '',
     },
+    selectProps = {},
     datePicker = {
       customClass: '',
       hasClear: false,
     },
+    datePickerProps = {},
     searchResetGroup = {
       show: false,
       searchName: '查询',
@@ -270,6 +274,7 @@ const DateSelector: FC<IProps> = (props) => {
           value={value.dateType}
           onChange={onSelectChange}
           className={`select ${select?.customClass}`}
+          {...selectProps}
         />
         {[
           'day',
@@ -299,6 +304,7 @@ const DateSelector: FC<IProps> = (props) => {
               )
             }
             hasClear={datePicker?.hasClear}
+            {...datePickerProps}
           />
         )}
         {['week'].includes(value.dateType) && (
@@ -319,6 +325,7 @@ const DateSelector: FC<IProps> = (props) => {
               )
             }
             hasClear={datePicker?.hasClear}
+            {...datePickerProps}
           />
         )}
         {['month'].includes(value.dateType) && (
@@ -339,6 +346,7 @@ const DateSelector: FC<IProps> = (props) => {
               )
             }
             hasClear={datePicker?.hasClear}
+            {...datePickerProps}
           />
         )}
         {['year'].includes(value.dateType) && (
@@ -359,6 +367,7 @@ const DateSelector: FC<IProps> = (props) => {
               )
             }
             hasClear={datePicker?.hasClear}
+            {...datePickerProps}
           />
         )}
         {[
@@ -411,6 +420,7 @@ const DateSelector: FC<IProps> = (props) => {
               )
             }
             hasClear={datePicker?.hasClear}
+            {...datePickerProps}
           />
         )}
         {searchResetGroup.show && (

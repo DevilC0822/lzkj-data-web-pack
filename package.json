@@ -1,6 +1,6 @@
 {
   "name": "lzkj-data-web-pack",
-  "version": "0.0.1-alpha.7",
+  "version": "0.0.1-alpha.8",
   "description": "陆泽科技数据业务部门前端开发工具库",
   "license": "MIT",
   "module": "dist/index.js",
