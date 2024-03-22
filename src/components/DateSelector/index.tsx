@@ -258,7 +258,7 @@ const DateSelector: FC<IProps> = (props) => {
   };
 
   useEffect(() => {
-    dealInitValue();
+    // dealInitValue();
   }, []);
   return (
     <div className={`lz-date-selector ${prefix.direction}`}>
