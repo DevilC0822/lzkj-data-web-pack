@@ -4,7 +4,7 @@ import '@alifd/next/lib/message/style';
 import '@alifd/next/lib/select/style';
 import dayjs, { type Dayjs, type ManipulateType, type OpUnitType } from 'dayjs';
 import 'dayjs/locale/zh-cn';
-import React, { useEffect, type FC } from 'react';
+import React, { type FC } from 'react';
 import SearchResetGroup from '../SearchResetGroup';
 import './index.scss';
 import type { IDataSource, IDataSourceValue } from './types';
@@ -188,16 +188,16 @@ const DateSelector: FC<IProps> = (props) => {
   } = props;
 
   // 设置value的默认值
-  const dealInitValue = () => {
-    const dateType =
-      typeof dataSource[0] === 'string' ? dataSource[0] : dataSource[0].value;
-    const [startDate, endDate] = getDefaultDate(dateType, dateOffset);
-    changeValue({
-      dateType,
-      startDate,
-      endDate,
-    });
-  };
+  // const dealInitValue = () => {
+  //   const dateType =
+  //     typeof dataSource[0] === 'string' ? dataSource[0] : dataSource[0].value;
+  //   const [startDate, endDate] = getDefaultDate(dateType, dateOffset);
+  //   changeValue({
+  //     dateType,
+  //     startDate,
+  //     endDate,
+  //   });
+  // };
 
   const onInnerSearch = () => {
     onSearch(value);
@@ -206,7 +206,7 @@ const DateSelector: FC<IProps> = (props) => {
     if (onReset) {
       onReset();
     } else {
-      dealInitValue();
+      // dealInitValue();
     }
   };
 
@@ -257,9 +257,9 @@ const DateSelector: FC<IProps> = (props) => {
     });
   };
 
-  useEffect(() => {
-    // dealInitValue();
-  }, []);
+  // useEffect(() => {
+  //   dealInitValue();
+  // }, []);
   return (
     <div className={`lz-date-selector ${prefix.direction}`}>
       {prefix.show && (

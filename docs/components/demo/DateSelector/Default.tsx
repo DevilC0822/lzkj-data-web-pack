@@ -95,7 +95,7 @@ const dataSource: IDataSource[] = [
 
 export default () => {
   const [value, setValue] = useState({
-    dateType: '',
+    dateType: dataSource[0].value,
     startDate: '',
     endDate: '',
   });

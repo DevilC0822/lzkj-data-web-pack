@@ -12,9 +12,21 @@ title: 版本变更记录
 
 这是一个预览版，仅供参考，不建议在生产环境中使用。
 
+## v0.0.1-alpha.9
+
+- [`DateSelector`](../components/DateSelector.md)组件取消初始化时设置默认值的行为
+
 ## v0.0.1-alpha.8
 
 - [`DateSelector`](../components/DateSelector.md)组件新增**selectProps** 和 **datePickerProps**属性，用于配置选择器和日期选择器的属性
+
+## v0.0.1-alpha.7
+
+- [`DateSelector`](../components/DateSelector.md)组件重命名为 DateSelector 并修改重置查询组件默认不展示
+
+## v0.0.1-alpha.6
+
+- react peer 依赖改为>=16.8.0
 
 ## v0.0.1-alpha.5
 
